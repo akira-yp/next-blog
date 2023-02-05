@@ -1,5 +1,5 @@
 import { Container, Box, Text } from "./common/components";
-import React from 'react'
+// import React from 'react'
 
 export default function Footer() {
   return (
