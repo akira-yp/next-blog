@@ -218,4 +218,3 @@ export interface Database {
     }
   }
 }
-Done in 3.60s.
