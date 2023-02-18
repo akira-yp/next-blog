@@ -5,7 +5,7 @@ import SupabaseProvider from './common/components/supabase-provider'
 import Navigation from './common/components/navigation'
 import { createClient } from '../utils/supabase-server'
 import React from 'react'
-
+import 'tailwindcss/tailwind.css';
 export const revalidate = 0
 
 const RootLayout = async ({ children }: { children: React.ReactNode }) => {
