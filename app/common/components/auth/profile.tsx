@@ -20,6 +20,7 @@ const Profile = () => {
   const [avatar, setAvatar] = useState<File | null>(null)
   const [loading, setLoading] = useState(false)
   const [loadingLogout, setLoadingLogout] = useState(false)
+  const [isRendered, setIsRendered] = useState(false);
 
   //画像アップロード
   const onUploadImage = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
@@ -33,6 +34,7 @@ const Profile = () => {
 
   useEffect(() => {
     if (user.id)  {
+      setIsRendered(true)
       const getProfile = async () => {
         const { data: userData, error } = await supabase
           .from('profiles')
@@ -128,7 +130,7 @@ const Profile = () => {
     setLoadingLogout(false)
   }
 
-  return (
+  return isRendered ? (
 
     <div className="max-w-sm mx-auto">
       <form onSubmit={onSubmit}>
@@ -186,7 +188,7 @@ const Profile = () => {
         )}
       </div>
     </div>
-  )
+  ) : (<></>)
 }
 
 export default Profile

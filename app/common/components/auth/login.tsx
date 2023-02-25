@@ -33,7 +33,7 @@ const Login = () => {
       return
     }
 
-    router.push('/')
+    router.push('/admin')
     setLoading(false)
   }
 
