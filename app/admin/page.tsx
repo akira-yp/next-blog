@@ -12,7 +12,7 @@ const Admin = () => {
 
   useEffect(() => {
     if (!user.id) {
-      router.push('/auth/login')
+      router.replace('/')
     }
   },[])
 
