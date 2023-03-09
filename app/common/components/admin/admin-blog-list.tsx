@@ -2,10 +2,10 @@
 import { notFound } from 'next/navigation'
 import { createClient } from '../../../../utils/supabase-server'
 
-import BlogItem from './blog-item'
+import BlogItemRow from './admin-blog-item'
 
 // ブログリスト
-const BlogList = async () => {
+const AdminBlogList = async () => {
   const supabase = createClient()
 
   // ブログリスト取得
@@ -18,7 +18,7 @@ const BlogList = async () => {
   if (!blogsData) { return notFound }
 
   return (
-    <div className="grid grid-cols-3 gap-5">
+    <div>
       {await Promise.all(
         blogsData.map(async (blogData) => {
           const { data: userData } = await supabase
@@ -38,11 +38,11 @@ const BlogList = async () => {
             avatar_url: userData!.avatar_url,
           }
 
-          return <BlogItem key={blog.id} {...blog} />
+          return <BlogItemRow key={blog.id} {...blog} />
         })
       )}
     </div>
   )
 }
 
-export default BlogList
+export default AdminBlogList

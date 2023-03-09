@@ -10,7 +10,7 @@ import Image from 'next/image'
 import Loading from '../../../loading'
 
 // プロフィール
-const Profile = () => {
+const EditProfile = () => {
   const { supabase } = useSupabase()
   const router = useRouter()
   const { user } = useStore()
@@ -191,5 +191,5 @@ const Profile = () => {
   ) : (<></>)
 }
 
-export default Profile
+export default EditProfile
 

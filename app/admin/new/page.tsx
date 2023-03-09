@@ -1,4 +1,4 @@
-import BlogNew from '../../common/components/blog/blog-new'
+import BlogNew from '../../common/components/admin/blog-new'
 
 // ブログ作成を作成
 const BlogNewPage = () => {
