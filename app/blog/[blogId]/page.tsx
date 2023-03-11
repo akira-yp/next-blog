@@ -42,7 +42,7 @@ const BlogDetailPage = async ({ params }: PageProps) => {
     avatar_url: profileData!.avatar_url,
   }
 
-  return <BlogDetail blog={blog}/>
+  return <BlogDetail blog={blog} />
 }
 
 export default BlogDetailPage

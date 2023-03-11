@@ -32,13 +32,15 @@ const AdminMenu = () => {
         </Link>
       </div>
       <div className='flex justify-center m-5'>
-        <IconButton
-          colorScheme='blue'
-          aria-label='show new'
-          icon={<MdAccessibilityNew/>}
-          fontSize='25px'
-          rounded='full'
-        />
+        <Link href="/admin/profile">
+          <IconButton
+            colorScheme='blue'
+            aria-label='show new'
+            icon={<MdAccessibilityNew/>}
+            fontSize='25px'
+            rounded='full'
+          />
+        </Link>
       </div>
     </div>
   )

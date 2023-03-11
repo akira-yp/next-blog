@@ -32,6 +32,7 @@ const BlogItemRow = (blog: BlogListType) => {
               公開日 {format(new Date(blog.created_at), 'yyyy/MM/dd')}
             </div>
           </div>
+          <Link href={`/admin/blog/${blog.id}`}>編集</Link>
         </div>
         {/* <Link href={`blog/${blog.id}`}>
           <Image
