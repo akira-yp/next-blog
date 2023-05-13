@@ -5,7 +5,7 @@ import type { BlogListType } from '../../../../utils/blog.types'
 
 import Link from 'next/link'
 import Image from 'next/image'
-import { Center, Divider } from '@chakra-ui/react'
+import {  Box, Divider } from '../chakra'
 
 // ブログアイテム
 const BlogItem = (blog: BlogListType) => {
@@ -17,27 +17,19 @@ const BlogItem = (blog: BlogListType) => {
   }
 
   return (
-    <div className="break-words">
-      <div className="mb-5">
+    <Box py="3">
+      {/* <div className="mb-5">
         <Link href={`blog/${blog.id}`}>
-          {/* <Image
-            src={blog.image_url}
-            className="rounded-lg aspect-video object-cover"
-            alt="image"
-            width={640}
-            height={360}
-          /> */}
         </Link>
-      </div>
-      <div className="text-gray-500 text-sm">
+      </div> */}
+      <Box className="text-gray-500 text-sm">
         {format(new Date(blog.created_at), 'yyyy/MM/dd')}
-      </div>
-      <div className="font-bold text-lg">{blog.title}</div>
-      <div className="mb-3 text-gray-500">{content}</div>
-      <Center>
-        <Divider orientation='horizontal' color="#666666" />
-      </Center>
-    </div>
+      </Box>
+      <Link href={`blog/${blog.id}`}>
+        <Box className="font-bold text-md">{blog.title}</Box>
+      </Link>
+      <Divider borderColor="#000" w="80%" pt="4" />
+    </Box>
   )
 }
 
