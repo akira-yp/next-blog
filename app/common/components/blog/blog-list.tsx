@@ -18,7 +18,7 @@ const BlogList = async () => {
   if (!blogsData) { return notFound }
 
   return (
-    <div className="grid grid-cols-3 gap-5">
+    <div className="flex w-50 grid grid-cols-1 gap-5 h-full pt-10 px-10">
       {await Promise.all(
         blogsData.map(async (blogData) => {
           const { data: userData } = await supabase
