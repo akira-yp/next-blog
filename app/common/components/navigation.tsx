@@ -14,7 +14,7 @@ const Navigation = () => {
         <Box p="4">
           <Text as="b" fontSize="lg">
             <Link href="/">
-              YP2.TECH.WEB
+              YPX2.NOTE
             </Link>
           </Text>
         </Box>
@@ -32,7 +32,12 @@ const Navigation = () => {
               <Flex gap='2'>
                 <Center>
                   <Text as="b">
-                    <Link href="/about" as="b">ABOUT</Link>
+                    <Link href="/blog">BLOG</Link>
+                  </Text>
+                </Center>
+                <Center>
+                  <Text as="b">
+                    <Link href="/about">ABOUT</Link>
                   </Text>
                 </Center>
                 <Center>
