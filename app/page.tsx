@@ -1,15 +1,21 @@
 // メインページ
-import React, { Suspense } from 'react'
-import BlogList from './common/components/blog/blog-list'
+// import React, { Suspense } from 'react'
+// import BlogList from './common/components/blog/blog-list'
+// import SectionTitle from './common/components/section-title'
+import { Center, Text, Flex, Spacer } from './common/components/chakra'
 
 const Page = () => {
   return (
-    <div className="flex-1 container max-w-screen-x1 mx-auto px-5 py-10">
-      <div className="h-full">
-          {/* @ts-ignore*/}
-          <BlogList />
-      </div>
-    </div>
+    <Center h='100vh' bgColor='#e4c9ab'>
+      <Flex>
+        <Center bgColor='#212631' p='8'>
+          <Text fontSize='6xl' as="b" textColor='#e4c9ab'>YPX2</Text>
+        </Center>
+        <Center p='8'>
+          <Text fontSize='6xl' as="b" textColor='#212631'>NOTE</Text>
+        </Center>
+      </Flex>
+    </Center>
   )
 }
 

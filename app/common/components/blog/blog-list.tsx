@@ -1,7 +1,7 @@
 // import { supabase } from '@/utils/supabaseClient'
 import { notFound } from 'next/navigation'
 import { createClient } from '../../../../utils/supabase-server'
-
+import { Box } from '../chakra'
 import BlogItem from './blog-item'
 
 // ブログリスト
@@ -18,7 +18,7 @@ const BlogList = async () => {
   if (!blogsData) { return notFound }
 
   return (
-    <div className="grid grid-cols-3 gap-5">
+    <Box flex="1" p="5">
       {await Promise.all(
         blogsData.map(async (blogData) => {
           const { data: userData } = await supabase
@@ -41,7 +41,7 @@ const BlogList = async () => {
           return <BlogItem key={blog.id} {...blog} />
         })
       )}
-    </div>
+    </Box>
   )
 }
 

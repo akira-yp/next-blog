@@ -16,7 +16,7 @@ export const middleware = async ( req: NextRequest ) => {
   //　未認証状態で/admin以降に遷移した場合は、ログイン画面にリダイレクト
   if(!session && req.nextUrl.pathname.startsWith('/admin')) {
     const redirectUrl = req.nextUrl.clone()
-    redirectUrl.pathname = '/'
+    redirectUrl.pathname = '/auth/login'
     return NextResponse.redirect(redirectUrl)
   }
 
