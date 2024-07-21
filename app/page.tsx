@@ -1,8 +1,5 @@
 // メインページ
-// import React, { Suspense } from 'react'
-// import BlogList from './common/components/blog/blog-list'
-// import SectionTitle from './common/components/section-title'
-import { Center, Text, Flex, Spacer } from './common/components/chakra'
+import { Center, Text, Flex } from './common/components/chakra'
 
 const Page = () => {
   return (
